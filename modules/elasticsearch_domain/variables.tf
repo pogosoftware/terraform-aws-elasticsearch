@@ -24,37 +24,37 @@ variable "advanced_options" {
 variable "advanced_security_options" {
   default     = {}
   description = "Configuration block for fine-grained access control"
-  type        = map(any)
+  type        = any
 }
 
 variable "auto_tune_options" {
   default     = {}
   description = "Configuration block for the Auto-Tune options of the domain"
-  type        = map(any)
+  type        = any
 }
 
 variable "cluster_config" {
   default     = {}
   description = "Configuration block for the cluster of the domain"
-  type        = map(any)
+  type        = any
 }
 
 variable "cognito_options" {
   default     = {}
   description = "Configuration block for authenticating Kibana with Cognito"
-  type        = map(any)
+  type        = any
 }
 
 variable "domain_endpoint_options" {
   default     = {}
   description = "Configuration block for domain endpoint HTTP(S) related options"
-  type        = map(any)
+  type        = any
 }
 
 variable "ebs_options" {
   default     = {}
   description = "Configuration block for EBS related options, may be required based on chosen instance size"
-  type        = map(any)
+  type        = any
 }
 
 variable "elasticsearch_version" {
@@ -66,25 +66,25 @@ variable "elasticsearch_version" {
 variable "encrypt_at_rest" {
   default     = {}
   description = "Configuration block for encrypt at rest options. Only available for certain instance types"
-  type        = map(any)
+  type        = any
 }
 
 variable "log_publishing_options" {
   default     = {}
   description = "Configuration block for publishing slow and application logs to CloudWatch Logs"
-  type        = map(any)
+  type        = any
 }
 
 variable "node_to_node_encryption" {
   default     = {}
   description = "Configuration block for node-to-node encryption options"
-  type        = map(any)
+  type        = any
 }
 
 variable "snapshot_options" {
   default     = {}
   description = "Configuration block for snapshot related options"
-  type        = map(any)
+  type        = any
 }
 
 variable "tags" {
@@ -96,5 +96,5 @@ variable "tags" {
 variable "vpc_options" {
   default     = {}
   description = "Configuration block for VPC related options"
-  type        = map(any)
+  type        = any
 }
