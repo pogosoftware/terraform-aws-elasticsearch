@@ -128,11 +128,11 @@ resource "aws_elasticsearch_domain" "this" {
   }
 
   dynamic "log_publishing_options" {
-    for_each = var.log_publishing_options != {} ? [var.log_publishing_options] : []
+    for_each = var.log_publishing_options #!= {} ? [var.log_publishing_options] : []
 
     content {
+      log_type                 = log_publishing_options.key
       cloudwatch_log_group_arn = log_publishing_options.value["cloudwatch_log_group_arn"]
-      log_type                 = log_publishing_options.value["log_type"]
       enabled                  = try(log_publishing_options.value["enabled"], true)
     }
   }
