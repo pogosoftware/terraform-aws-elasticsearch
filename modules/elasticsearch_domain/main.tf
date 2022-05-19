@@ -77,7 +77,7 @@ resource "aws_elasticsearch_domain" "this" {
         for_each = try(cluster_config.value["zone_awareness_config"], {}) != {} ? [cluster_config.value["zone_awareness_config"]] : []
 
         content {
-          availability_zone_count = lootrykup(zone_awareness_config.value["availability_zone_count"], 2)
+          availability_zone_count = try(zone_awareness_config.value["availability_zone_count"], 2)
         }
       }
 
